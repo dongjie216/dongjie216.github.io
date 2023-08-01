@@ -8,15 +8,21 @@
 </head>
 
 <body>
-    <div>hello</div>
+    <div onclick="load()">hello</div>
 
-    <audio controls src="asset/birthday.mp3"></audio>
+    <audio id="audio" preload="none" controls src="asset/birthday.mp3"></audio>
 </body>
 
 <script>
     window.onload=function()
     {
+        var audio=document.getElementById(audio)
+    }
 
+    function load()
+    {
+        audio.load()
+        audio.play()
     }
 </script>
 
